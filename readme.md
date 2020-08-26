@@ -7,6 +7,9 @@
 | sync.Map      | 底层通分离读写map和原子指令来实现读的近似无锁，并通过延迟更新的方式来保证读的无锁化 | 读多修改很少，元素增加删除频率不高的情况                |
 | ConcurrentMap | map分片，降低锁粒度，从而达到最少的锁等待时间(锁冲突)                                | 大并发                                                 |
 
+# 待验证
+需要找台linux机器验证`benchmark`  
+
 参考：
 - https://www.cnblogs.com/jiujuan/p/13365901.html
 - https://github.com/orcaman/concurrent-map
